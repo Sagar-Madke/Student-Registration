@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+
+{% block content %}
+	<form method ="POST" action = "/register">
+			{% csrf_token %}
+			<div class ="container">
+				<div class ="panel panel-primary">
+					<div class ="panel-heading">Registration Form...</div>
+					<div class ="panel-body">
+						<div class="form-group">
+							<label for ="reg_no">Registration No. :</label>
+							<input type ="text" class ="form-control" id ="reg_no" disabled>
+						</div>
+						<div class ="form-group">
+							<label for ="name">Name:</label>
+							<input type ="text" class ="form-control" id ="name">
+						</div>
+						<div class="form-group">
+							<label for ="address">Address:</label>
+							<input type ="text" class ="form-control" id ="address">
+						</div>
+						<div class="form-group">
+							<label for ="email">Email:</label>
+							<input type ="email" class ="form-control" id ="email">
+						</div>
+						<div class="form-group">
+							<label for ="dob">Date of birth:</label>
+							<input type ="text" class ="form-control" id ="dob">
+						</div>
+						<div class="checkbox">
+						  <label><input type="checkbox" value="">Is an Indian :</label>
+						</div>
+						<div class="radio">
+							<label><input type ="radio" name ="male" >Male</label
+						</div>
+						<div class="radio">
+	  						<label><input type="radio" name="female">Female</label>
+						</div>
+						<div class="radio">
+							<label><input type ="radio" name ="male" >Transgender</label>
+						</div>
+						
+						<div class = "button">
+							<input type = "submit" class= "btn btn-success" value="Register">
+						</div>
+					</div>
+				</dvi>
+
+			</div>
+		</form>
+
+{% endblock %}
